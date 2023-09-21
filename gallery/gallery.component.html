@@ -1,0 +1,34 @@
+
+<h2>school gallery</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let image of images">
+      <!-- Card content for each image -->
+      <div class="card mb-4 shadow-sm">
+        <img [src]="'http://localhost:8080/image/images/' + image.file_name" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <!-- <p class="card-text">Image ID: {{ image.image_id }}</p> -->
+          <!-- <p class="card-text">SCHOOL ID: {{ image.idschools }}</p> -->
+          <!-- <p class="card-text">Created At: {{ image.created_at }}</p> -->
+          <!-- <p class="card-text">ALBUM At: {{ image.id_album }}</p> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Button -->
+<!-- Add Image Button -->
+<button (click)="openFileInput()" class="btn btn-primary">Add Image</button>
+
+<!-- Hidden File Input Field -->
+<input #fileInput type="file" style="display: none" (change)="onFileSelected($event)" accept="image/*">
+
+<!-- File Input (hidden by default) -->
+<input #fileInput type="file" (change)="onFileSelected($event)" style="display: none">
+
+
+
+
+

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Course Details - Mashule </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/src/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Mentor
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto"><a href="index.html">Mashule</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a class="active" href="/schools">schools</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href="/login" class="get-started-btn">Get Started</a>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs" data-aos="fade-in">
+            <div class="container">
+                <h2>Havard School</h2>
+                <p>Havard Junior School is a mixed-day and boarding private school in Embu County. The school is known
+                    for its excellent performance. It has a proven record of producing excellent performing students who
+                    join national and extra county schools. </p>
+            </div>
+        </div><!-- End Breadcrumbs -->
+
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="column">
+                <img src="assets/img/havard1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/havard2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/havard3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/havard4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/havard5.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/havard6.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/havard7.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/havard8.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="assets/img/havard1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="assets/img/havard2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img3_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img4_wide.jpg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="column">
+                    <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="assets/img/havard/2021120153403_IMG_9547.jpg" onclick="currentSlide(4)"
+                        alt="Lights">
+                </div>
+            </div>
+        </div>
+
+        <!-- ======= Cource Details Section ======= -->
+        <section id="course-details" class="course-details">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h3>Havard Schools</h3>
+                        <p>
+                            Havard Junior School is a mixed-day and boarding private school in Embu County. The school
+                            is known for its excellent performance. It has a proven record of producing excellent
+                            performing students who join national and extra county schools.<br>
+                            For the past years, the school has been excelling and keeps raising the bar high in terms of
+                            mean grades.<br>
+                            In the just-released KCPE exam results, the school led by example by having more than 10
+                            students scoring 400 marks and above and all the rest scoring more than 350 marks. The mean
+                            score of the school was 384 marks.<br>
+                            The teamwork between the administration, teachers, parents, and students creates a reckoning
+                            force that propels results to a higher level each year.<br>
+                            The school is located in a cool serene environment which gives the students the best
+                            studying environment. The school boasts of efficient transport of more than four buses and a
+                            school van. This ensures the students have no problems when it comes to academic trips as
+                            well as inter-schools competitions and other activities which require the student outside
+                            the school.,<br>
+                            To contact the school just call 0722 398698 or 0792 718080 send an email to info@havardjuniorschool.sc.ke 
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Cource Details Section -->
+
+        <!-- ======= Cource Details Tabs Section ======= -->
+        <section id="cource-details-tabs" class="cource-details-tabs">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <ul class="nav nav-tabs flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">transport</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Grading</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 mt-4 mt-lg-0">
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="tab-1">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Architecto ut aperiam autem id</h3>
+                                        <p class="fst-italic">Our school takes great pride in providing professional and
+                                            reliable transportation services for our students.With a strong emphasis on
+                                            safety and efficiency, we ensure that your child's journey to and from
+                                            school is handled with utmost care. Our dedicated team of trained drivers
+                                            undergoes thorough background checks and extensive training to guarantee the
+                                            highest standards of professionalism and expertise</p>
+                                        <p>Our fleet of buses is equipped with advanced safety features and undergoes
+                                            regular maintenance to ensure their optimal performance. We meticulously
+                                            plan and optimize routes, considering factors like traffic flow and
+                                            proximity to students' homes, to ensure punctuality and minimize travel
+                                            time. Rest assured that when you entrust your child's transportation to us,
+                                            you are choosing a service that is committed to professionalism, safety, and
+                                            reliability.Consequatur dolorem quaerat quos qui similique accusamus nostrum
+                                            rem
+                                            vero</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/course-details-tab-1.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-2">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Et blanditiis nemo veritatis excepturi</h3>
+                                        <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente
+                                            dila parde sonata raqer
+                                            a videna mareta paulona marka</p>
+                                        <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et
+                                            reiciendis sunt sunt
+                                            est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates.
+                                            Optio nesciunt eaque
+                                            beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/course-details-tab-2.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-3">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
+                                        <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non
+                                            enim fuga. Qui natus
+                                            non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                                        <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis
+                                            quisquam. Neque
+                                            necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed
+                                            laboriosam a iste odio. Earum
+                                            odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/course-details-tab-3.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-4">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                                        <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure
+                                            voluptas iure porro quis
+                                            delectus</p>
+                                        <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam
+                                            necessitatibus aliquam
+                                            fugiat debitis quis velit. Eum ex maxime error in consequatur corporis
+                                            atque. Eligendi asperiores
+                                            sed qui veritatis aperiam quia a laborum inventore</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/course-details-tab-4.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-5">
+                                <div class="row">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                                        <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro
+                                            quia.</p>
+                                        <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis
+                                            recusandae ut non quam ut
+                                            quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed
+                                            est sint aut vitae
+                                            molestiae voluptate vel</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/course-details-tab-5.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Cource Details Tabs Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>MASHULE</h3>
+                        <p>
+                            A108 Maamlaka Road <br>
+                            Nairobi, NRB 535022<br>
+                            KENYA <br><br>
+                            <strong>Phone:</strong> +254 7594 32206 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/services">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Pre Schools</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Junior Schools</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">High Schools</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Colleges</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">University</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Want To Notified? Subscribe Now</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Mashule</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+                    Designed by <a href="https://bootstrapmade.com/">Earvine Munene</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="/twitter" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="/facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="instagram" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="/skype" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="/linkedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="/whasapp" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+
+    <!-- <div id="preloader"></div> -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/assets/js/main.js"></script>
+    <script>
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+</body>
+
+</html>

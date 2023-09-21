@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Add your head content here -->
+    <style>
+        /* Update the primary color to luminous green (#00FF00) */
+        :root {
+            --primary-color: #00ff00;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: var(--primary-color);
+        }
+
+        /* Sidebar brand text color */
+        .sidebar-brand-text {
+            color: #078f32;
+            /* White text color */
+        }
+
+        /* Topbar styles */
+        .topbar {
+            background-color: var(--primary-color);
+        }
+
+        /* Topbar text color */
+        .navbar-dark .navbar-nav .nav-link {
+            color: #0ed450;
+            /* White text color */
+        }
+
+        /* Footer text color */
+        .sticky-footer {
+            color: #000000;
+            /* Black text color */
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Add your header content here -->
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">MASHULE</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0" />
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider" />
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block" />
+
+        </ul>
+        <!-- End of Sidebar -->
+        <app-school-informations></app-school-informations>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1"></li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                    </ul>
+                </nav>
+                <h1>School Details </h1>
+                <!-- End of Topbar -->
+                <!-- Gallery  Card Example -->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <H3>SCHOOL Gallery</H3>
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="userCount">
+                                            <li class="nav-item">
+                                                <!-- <a class="nav-link" href="/gallerydetails"> -->
+                                                <a class="nav-link" [href]="'/gallerydetails/' + selectedSchool?.idschools">
+                                                    <i class=""></i>
+                                                    <span>Gallery</span>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- school-details.component.html -->
+                    <!-- Event-Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <H3>SCHOOL EVENTS</H3>
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="userCount">
+                                            <li class="nav-item">
+                                                <!-- <a class="nav-link" href="/gallerydetails"> -->
+                                                <a class="nav-link" [href]=" '/eventsform/'+ selectedSchool?.idschools">
+                                                    <i class=""></i>
+                                                    <span>EVENTS</span>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- school-details.component.html -->
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h4 class="m-0 font-weight-bold text-primary">School Logo</h4>
+                            </div>
+                            <div class="card-body text-center">
+                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem"
+                                    [src]="'http://localhost:8080/logo/' + selectedSchool?.logoUpload"
+                                    alt="School Logo" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    School Details
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <h2>{{ selectedSchool?.schoolName }}</h2>
+                                <h4>Location: {{ selectedSchool?.location }}</h4>
+                                <h4>School Code: {{ selectedSchool?.schoolCode }}</h4>
+                                <h4>County: {{ selectedSchool?.county }}</h4>
+                                <h4>Subcounty: {{ selectedSchool?.subcounty }}</h4>
+                                <h4>Nearest Town: {{ selectedSchool?.nearestTown }}</h4>
+                                <h4>Number of Streams: {{ selectedSchool?.numberOfStreams }}</h4>
+                                <h4>Number of Students: {{ selectedSchool?.numberOfStudents }}</h4>
+                    
+                                <!-- Add more details as needed -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="text-center my-auto">
+                            <span>© Your Website 2023</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+            </div>
+            <!-- End of Content Wrapper -->
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- Add your own scripts here -->
+    </div>
+
+
+
+</body>
+
+</html>

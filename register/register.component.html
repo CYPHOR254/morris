@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Mashule Register</title>
+
+  <!-- Custom fonts for this template-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+
+  <!-- Custom styles for this template-->
+  <!-- <link href="./assets/css/sb-admin-2.min.css" rel="stylesheet"> -->
+</head>
+
+<body class="bg-gradient-primary">
+  <div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+          <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+          <div class="col-lg-7">
+            <div class="p-5">
+              <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+              </div>
+              <form class="example-form" [formGroup]="registerform" 
+                enctype="multipart/form-data">
+                <div *ngIf="currentStep === 1">
+                  <h4>Personal Details</h4>
+                  <div class="form-group row">
+                    <label for="subcounty">First Name</label>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input type="text" class="form-control form-control-user" id="examplefirstName"
+                        placeholder="First Name" formControlName="firstName" />
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="subcounty">Last Name</label>
+                      <input type="text" class="form-control form-control-user" id="examplelastName"
+                        placeholder="Last Name" formControlName="lastName" />
+                    </div>
+                  </div>
+                  <br />
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label for="subcounty">Email</label>
+                      <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                        placeholder="Email" formControlName="email" />
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="subcounty">Phone Number</label>
+                      <input type="number" class="form-control form-control-user" id="examplephoneNo"
+                        placeholder="Phone Number" formControlName="phoneNumber" />
+                    </div>
+                  </div>
+                  <br />
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label for="subcounty">ID Number</label>
+                      <input type="number" class="form-control form-control-user" id="exampleIdnumber"
+                        placeholder="ID Number" formControlName="idNumber" />
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="subcounty">Date of Birth</label>
+                      <input type="date" class="form-control form-control-user" id="exampleDOB"
+                        placeholder="Date of Birth" formControlName="dob" />
+                    </div>
+                  </div>
+                  <br />
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label for="subcounty">password</label>
+                      <input type="password" id="exampleInputPassword" placeholder="Password" formControlName="password"
+                        class="form-control form-control-user" />
+                    </div>
+
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label for="subcounty">Confirm Password</label>
+                      <input type="password" id="exampleInputRepeatPassword" placeholder="Confirm Password"
+                        formControlName="confirmPassword" class="form-control form-control-user" />
+                    </div>
+                  </div>
+
+                  <mat-radio-group formControlName="gender" aria-label="Select an option">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                  </mat-radio-group>
+                  <br />
+                  <br />
+                  <hr />
+                  <div class="form-group row">
+                    <div class="col-md-4"></div>
+                    <button class="btn btn-primary btn-user btn-block btn-sm smaller-width" type="button"
+                      (click)="nextStep()">
+                      Next Step
+                    </button>
+                  </div>
+                </div>
+                <div *ngIf="currentStep === 2">
+                  <h4>School Details</h4>
+                  <div class="form-group row">
+                    <div class="col-sm-6">
+                      <label for="subcounty">School Name</label>
+                      <input type="text" class="form-control form-control-user" id="exampleSchoolName"
+                        placeholder="School Name" formControlName="schoolName" />
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label for="subcounty">Location</label>
+                      <input type="text" class="form-control form-control-user" id="exampleLocation"
+                        placeholder="Location" formControlName="location" />
+                    </div>
+                    <br /><br />
+
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="subcounty">School Code</label>
+                        <input type="number" class="form-control form-control-user" id="exampleSchoolCode"
+                          placeholder="School Code" formControlName="schoolCode" />
+                      </div>
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="subcounty">school Reg No</label>
+                        <input type="number" class="form-control form-control-user" id="exampleschoolRegNo"
+                          placeholder="school Reg No" formControlName="schoolRegNo" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <!-- County Dropdown -->
+                      <div class="col-sm-6">
+                        <label for="county">County</label>
+                        <select class="form-control" formControlName="county" (change)="onCountyChange()">
+                          <option *ngFor="let county of countiesData" [value]="county.name">
+                            {{ county.name }}
+                          </option>
+                        </select>
+                      </div>
+
+                      <!-- Subcounty Dropdown -->
+                      <div class="col-sm-6">
+                        <label for="subcounty">Subcounty</label>
+                        <select class="form-control" formControlName="subcounty" [disabled]="!selectedCounty">
+                          <option *ngFor="
+                                let subcounty of selectedCounty?.sub_counties
+                              " [value]="subcounty">
+                            {{ subcounty }}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="subcounty">Nearest Town</label>
+                        <input type="text" class="form-control form-control-user" id="exampleNearestTown"
+                          placeholder="Nearest Town" formControlName="nearestTown" />
+                      </div>
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="subcounty">ward</label>
+                        <input type="text" class="form-control form-control-user" id="exampleschoolRegNo"
+                          placeholder="ward" formControlName="ward" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="subcounty">Number of Streams</label>
+                        <input type="number" class="form-control form-control-user" id="exampleNumberOfStreams"
+                          placeholder="Number of Streams" formControlName="numberOfStreams" />
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="subcounty">Number of Students</label>
+                        <input type="number" class="form-control form-control-user" id="exampleNumberOfStudents"
+                          placeholder="Number of Students" formControlName="numberOfStudents" />
+                      </div>
+                    </div>
+                    <!-- Inside the form element -->
+
+                    <div class="form-group">
+                      <label for="logoUpload">School Logo</label>
+                      <input type="file" name="logoUpload" (change)="handleLogoUpload($event)" />
+                    </div>
+                    <!-- <div *ngIf="apiLoaded | async">
+                      <google-map></google-map>
+                    </div> -->
+                  </div>
+                  <br /><br />
+                  <div class="form-group row">
+                    <div class="col-sm-6">
+                      <button class="btn btn-primary btn-user btn-block btn-sm smaller-width" type="button"
+                        (click)="previousStep()">
+                        Previous Step
+                      </button>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0 d-flex justify-content-end">
+                      <button class="btn btn-primary btn-user btn-block btn-sm smaller-width" type="submit"
+                        (click)="proceedregister()">
+                        Register Account
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="/src/assets/vendor/jquery/jquery.min.js"></script>
+
+  <script src="/src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="/src/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="/src/assets/js/sb-admin-2.min.js"></script>
+
+  <script>
+    function handleLogoUpload(event) {
+      const logoPreview = document.getElementById("logoPreview");
+      const file = event.target.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          logoPreview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</body>
+
+</html>
