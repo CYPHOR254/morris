@@ -35,7 +35,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { SchoolInformationsComponent } from './school-informations/school-informations.component';
-
+import { NgbAccordionModule, NgbDropdownModule, NgbTooltipModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProfileComponent } from './profile/profile.component';
 
 // import { AuthInterceptorproviders } from './_helpers/auth.interceptor'  ;
 
@@ -63,7 +64,7 @@ import { SchoolInformationsComponent } from './school-informations/school-inform
     DialogBoxComponent,
     GalleryComponent,
     SchoolInformationsComponent,
-
+    ProfileComponent
   ],
   imports: [ 
     BrowserModule,
@@ -78,7 +79,10 @@ import { SchoolInformationsComponent } from './school-informations/school-inform
     HttpClientJsonpModule,
     GoogleMapsModule,
     ToastrModule.forRoot(),
-   
+    NgbAccordionModule,
+    NgbDropdownModule,
+    NgbTooltipModule,
+    NgbModule,
   ],
   // providers: [AuthInterceptorproviders],
   bootstrap: [AppComponent]
